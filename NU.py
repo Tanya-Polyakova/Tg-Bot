@@ -7,14 +7,14 @@ bot = telebot.TeleBot('6482673854:AAEEJTL9JYHF16SqQIulMLPJYeje7ta0gDs')
 def start(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("?? Поздороваться")
+    btn1 = types.KeyboardButton("Поздороваться")
     markup.add(btn1)
-    bot.send_message(message.from_user.id, "?? Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
+    bot.send_message(message.from_user.id, "Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
 
-    if message.text == '?? Поздороваться':
+    if message.text == 'Поздороваться':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn1 = types.KeyboardButton('Животные')
         btn2 = types.KeyboardButton('18+')
