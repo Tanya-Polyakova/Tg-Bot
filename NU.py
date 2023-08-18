@@ -73,8 +73,8 @@ def get_text_messages(message):
 def step(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("Требования к целевой страницы")
-    markup.add(btn1)
+    btn2 = types.KeyboardButton("Требования к целевой страницы")
+    markup.add(btn2)
     bot.send_message(message.from_user.id, "Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
