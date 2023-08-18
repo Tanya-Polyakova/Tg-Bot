@@ -79,7 +79,7 @@ def get_text_messages(message):
         btn41 = types.KeyboardButton('Тест1')
         btn42 = types.KeyboardButton('Тест2')
         markup.add(btn40, btn41, btn42)
-        bot.send_message(message.from_user.id, 'Проверить целевую страницу', reply_markup=markup) #ответ бота
+        bot.send_message(message.from_user.id, 'Выберите категорию', reply_markup=markup) #ответ бота
 
 bot.polling(none_stop=True) #обязательная для работы бота часть
 
