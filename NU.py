@@ -8,7 +8,8 @@ def start(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("Проверить страницу")
-    markup.add(btn1)
+    btn2 = types.KeyboardButton("Требования к целевой страницы")
+    markup.add(btn1, btn2)
     bot.send_message(message.from_user.id, "Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
@@ -68,14 +69,6 @@ def get_text_messages(message):
     elif message.text == 'Казино':
         bot.send_message(message.from_user.id, 'Продвижение, продажа, предложение услуг казино, азартных игр, размещения и приема ставок на спортивные события, услуг фэнтези-спорта, лотерей (в виде веб-сайта или физического учреждения, в котором доступны услуги монетизации и обналичивания денег), а также содействие в доступе к ним.', parse_mode='Markdown')
 
-
-@bot.message_handler(commands=['step'])
-def step(message):
-
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn2 = types.KeyboardButton("Требования к целевой страницы")
-    markup.add(btn2)
-    bot.send_message(message.from_user.id, "Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
