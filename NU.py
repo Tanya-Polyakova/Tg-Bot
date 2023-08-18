@@ -75,14 +75,18 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("Требования к целевой страницы")
     markup.add(btn2)
+     bot.send_message(message.from_user.id, "Привет! Я твой бот-помощник по проверке страниц TikTok!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
 
+    if message.text == 'Проверить целевую страницу':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn1 = types.KeyboardButton('Конфиденциальность')
         btn2 = types.KeyboardButton('Тест1')
         btn3 = types.KeyboardButton('Тест2')
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id, 'Выберите тематику', reply_markup=markup) #ответ бота
 
 bot.polling(none_stop=True) #обязательная для работы бота часть
 
