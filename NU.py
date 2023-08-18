@@ -75,10 +75,10 @@ def get_text_messages(message):
 
     if message.text == 'Проверить целевую страницу':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        btn1 = types.KeyboardButton('Конфиденциальность')
-        btn2 = types.KeyboardButton('Тест1')
-        btn3 = types.KeyboardButton('Тест2')
-        markup.add(btn1, btn2, btn3)
+        btn40 = types.KeyboardButton('Конфиденциальность')
+        btn41 = types.KeyboardButton('Тест1')
+        btn42 = types.KeyboardButton('Тест2')
+        markup.add(btn40, btn41, btn42)
         bot.send_message(message.from_user.id, 'Проверить целевую страницу', reply_markup=markup) #ответ бота
 
 bot.polling(none_stop=True) #обязательная для работы бота часть
