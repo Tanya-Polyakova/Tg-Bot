@@ -70,9 +70,6 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, 'Продвижение, продажа, предложение услуг казино, азартных игр, размещения и приема ставок на спортивные события, услуг фэнтези-спорта, лотерей (в виде веб-сайта или физического учреждения, в котором доступны услуги монетизации и обналичивания денег), а также содействие в доступе к ним.', parse_mode='Markdown')
 
 
-@bot.message_handler(content_types=['text'])
-def get_text_messages(message):
-
     if message.text == 'Требования к целевой страницы':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn40 = types.KeyboardButton('Конфиденциальность')
