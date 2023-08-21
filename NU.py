@@ -61,10 +61,8 @@ def get_text_messages(message):
 
 
     elif message.text == 'Животные':
-        bot.send_message(message.from_user.id, 'Продвижение, продажа или предложение животных, включая живых животных, домашний скот, домашних животных, туши или продукты животного происхождения или их части, а также содействие в доступе к ним. Подробнее', parse_mode='Markdown', @dp.message_handler(commands=['Подробнее'])
-async def process_start_command(message: types.Message):
-    await message.reply('<a href="https://ads.tiktok.com/">Подробнее</a>'))
-
+        bot.send_message(message.from_user.id, 'Продвижение, продажа или предложение животных, включая живых животных, домашний скот, домашних животных, туши или продукты животного происхождения или их части, а также содействие в доступе к ним. Подробнее - https://ads.tiktok.com/help/article/ad-review-checklist-landing-page?lang=en', parse_mode='Markdown')
+                         
     elif message.text == '18+':
         bot.send_message(message.from_user.id, 'Продвижение, продажа, предложение порнографических материалов, секс-игрушек и расходных материалов к ним, например смазок, эротических костюмов (фетиш-костюмы или костюмы для сексуальных фантазий), а также содействие в доступе к ним.', parse_mode='Markdown')
 
