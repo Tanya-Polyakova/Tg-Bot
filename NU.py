@@ -81,5 +81,8 @@ def get_text_messages(message):
         markup.add(btn40, btn41, btn42)
         bot.send_message(message.from_user.id, 'Выберите категорию', reply_markup=markup) #ответ бота
 
+    elif message.text == 'Конфиденциальность':
+        bot.send_message(message.from_user.id, 'Конф', parse_mode='Markdown')
+
 bot.polling(none_stop=True) #обязательная для работы бота часть
 
