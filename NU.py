@@ -73,7 +73,7 @@ def get_text_messages(message):
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
 
-    if message.text == 'Проверить целевую страницу':
+    if message.text == 'Требования к целевой страницы':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn40 = types.KeyboardButton('Конфиденциальность')
         btn41 = types.KeyboardButton('Тест1')
