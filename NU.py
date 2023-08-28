@@ -167,10 +167,11 @@ def get_text_messages(message):
 
     if message.text == 'Требования к целевой страницы':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        btn40 = types.KeyboardButton('Конфиденциальность')
-        btn41 = types.KeyboardButton('Тест1')
-        btn42 = types.KeyboardButton('Тест2')
-        markup.add(btn40, btn41, btn42)
+        btn40 = types.KeyboardButton('Информация о компании')
+        btn41 = types.KeyboardButton('Удобность для моб.устр.')
+        btn42 = types.KeyboardButton('Запрещенные товары')
+        btn43 = types.KeyboardButton('Конфид.инфа')
+        markup.add(btn40, btn41, btn42, btn43)
         bot.send_message(message.from_user.id, 'Выберите категорию', reply_markup=markup) #ответ бота
 
     elif message.text == 'Конфиденциальность':
